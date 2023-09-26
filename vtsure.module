@@ -17,10 +17,10 @@ http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\
 http-response ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js,tag=轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP
 
 # > 美颜相机一次性解锁内购（by黑黑酱）
-http-response ^https:\/\/api\.meiyan\.com\/iap\/verify\.json requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/myxj.js,tag=美颜相机一次性解锁内购
+http-response ^https:\/\/api\.meiyan\.com\/iap\/verify\.json requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/myCamera.js,tag=美颜相机一次性解锁内购
 
 # > 每日英语阅读/每日外刊 解锁课程  (By chamberlen)
 http-response ^https:\/\/dict\.eudic\.net\/jingting\/GetThisChapterTaskStatus? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mryy.js,tag=每日英语阅读
 
 [MITM]
-hostname = %APPEND% biz.caiyunapp.com, vsco.co,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.meiyan.com,dict.eudic.net
+hostname = %APPEND% biz.caiyunapp.com, vsco.co,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi,api.meiyan.com,dict.eudic.net
