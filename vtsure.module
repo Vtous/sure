@@ -10,6 +10,9 @@
 # ＞彩云天气解锁vip
 http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) script-path=https://raw.githubusercontent.com/mymoonyue/QuantumultX/master/Scripts/scripts/caiyun_svip.js, requires-body=true, timeout=10
 
+#Polarr泼辣修图 解锁特权 (需恢复购买)（by NobyDa）
+^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js,tag=泼辣修图
+
 # > VSCO滤镜VIP
 http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/QuantumultX/File/vsco.js,tag=VSCO滤镜VIP
 
@@ -23,4 +26,4 @@ http-response ^https:\/\/api\.meiyan\.com\/iap\/verify\.json requires-body=1,max
 http-response ^https:\/\/dict\.eudic\.net\/jingting\/GetThisChapterTaskStatus? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mryy.js,tag=每日英语阅读
 
 [MITM]
-hostname = %APPEND% biz.caiyunapp.com, vsco.co,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi,api.meiyan.com,dict.eudic.net
+hostname = %APPEND% biz.caiyunapp.com, vsco.co,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi,api.meiyan.com,dict.eudic.net,api.polaxiong.com
