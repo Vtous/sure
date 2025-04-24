@@ -4,7 +4,7 @@
 #!homepage=https://github.com/Vtous
 
 [Script]
-高德广告屏蔽 = type=http-response,pattern=^https?:\/\/.*amap\.com\/ws\/(valueadded\/screen\/list|ad\/recommend),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/你的用户名/你的仓库名/main/amap-ad-block.js
+高德广告屏蔽 = type=http-response,pattern=^https?:\/\/.*amap\.com\/ws\/(valueadded\/screen\/list|ad\/recommend),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Vtous/sure/refs/heads/master/amap-ad-block.js
 
 [MITM]
 hostname = *.amap.com
