@@ -1,29 +1,10 @@
-#!name=Vt整理
-#!system=ios
+#!name=高德地图广告屏蔽
+#!desc=屏蔽高德地图 App 的开屏广告、信息流广告等
+#!author=Vtous
+#!homepage=https://github.com/Vtous
 
-[General]
-[Rule]
-
-[Header Rewrite]
 [Script]
-
-# ＞彩云天气解锁vip
-http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) script-path=https://raw.githubusercontent.com/mymoonyue/QuantumultX/master/Scripts/scripts/caiyun_svip.js, requires-body=true, timeout=10
-
-#Polarr泼辣修图 解锁特权 (需恢复购买)（by NobyDa）
-^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js,tag=泼辣修图
-
-# > VSCO滤镜VIP
-http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/QuantumultX/File/vsco.js,tag=VSCO滤镜VIP
-
-# > 轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP(By @s y & Alex0510)
-http-response ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js,tag=轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP
-
-# > 美颜相机一次性解锁内购（by黑黑酱）
-http-response ^https:\/\/api\.meiyan\.com\/iap\/verify\.json requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/myCamera.js,tag=美颜相机一次性解锁内购
-
-# > 每日英语阅读/每日外刊 解锁课程  (By chamberlen)
-http-response ^https:\/\/dict\.eudic\.net\/jingting\/GetThisChapterTaskStatus? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mryy.js,tag=每日英语阅读
+高德广告屏蔽 = type=http-response,pattern=^https?:\/\/.*amap\.com\/ws\/(valueadded\/screen\/list|ad\/recommend),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/你的用户名/你的仓库名/main/amap-ad-block.js
 
 [MITM]
-hostname = %APPEND% biz.caiyunapp.com, vsco.co,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi,api.meiyan.com,dict.eudic.net,api.polaxiong.com
+hostname = *.amap.com
