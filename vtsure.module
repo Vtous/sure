@@ -1,10 +1,12 @@
 #!name=高德地图广告屏蔽
-#!desc=屏蔽高德地图 App 的开屏广告、信息流广告等
+#!desc=屏蔽高德地图 App 各类广告，包括首页、导航、开屏、搜索、打车等
 #!author=Vtous
 #!homepage=https://github.com/Vtous
 
 [Script]
-高德广告屏蔽 = type=http-response,pattern=^https?:\/\/.*amap\.com\/ws\/(valueadded\/screen\/list|ad\/recommend),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Vtous/sure/refs/heads/master/amap-ad-block.js
+
+# 高德地图广告拦截脚本（统一调用）
+高德地图广告 = type=http-response, pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/.*(splash_screen|card-service-plan-home|main-page|profile|marketingOperationStructured|tips_operation_location|hotword|nearbyrec_smart|routePlan|routeInfo|page\/main|content_info|resource|order_detail_car_tips|perception|plan|detail|coupon|recommend), requires-body=true, max-size=-1, script-path=https://raw.githubusercontent.com/Vtous/sure/refs/heads/master/amap-ad-block.js
 
 [MITM]
-hostname = *.amap.com
+hostname = m5.amap.com, m5-zb.amap.com
