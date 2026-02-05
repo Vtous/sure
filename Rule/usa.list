@@ -1,4 +1,7 @@
-# > TikTok
+# > Truth Social (新增)
+DOMAIN-SUFFIX,truthsocial.com
+
+# > TikTok (包括域名和User-Agent)
 DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,ibytedtos.com
 DOMAIN-SUFFIX,ibyteimg.com
@@ -12,3 +15,9 @@ DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,tiktokcdn.com
 DOMAIN-SUFFIX,tiktokv.com
 USER-AGENT,TikTok*
+
+# > PayPal (必须美区)
+USER-AGENT,PayPal*
+DOMAIN-KEYWORD,paypal
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypalobjects.com
